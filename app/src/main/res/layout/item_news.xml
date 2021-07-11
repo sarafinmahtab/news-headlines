@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/newsPosterImage"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3:2"
+            app:layout_constraintEnd_toStartOf="@+id/newsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/ic_roboto_medium"
+            android:maxLines="2"
+            android:padding="4dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/newsSourceText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/newsPosterImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nothing the stock market does ever scares its retail daredevils" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsSourceText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ic_roboto_medium"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/newsPublishDateTextView"
+            app:layout_constraintEnd_toEndOf="@+id/newsTitle"
+            app:layout_constraintStart_toStartOf="@+id/newsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/newsTitle"
+            tools:text="The Times of India" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsPublishDateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ic_roboto_medium"
+            android:gravity="end"
+            android:padding="4dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/newsSourceText"
+            app:layout_constraintStart_toStartOf="@+id/newsSourceText"
+            app:layout_constraintTop_toBottomOf="@+id/newsSourceText"
+            tools:text="Wed, 4 Jul 2001 12:08:56" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
