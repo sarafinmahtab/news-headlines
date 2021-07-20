@@ -1,6 +1,7 @@
 package com.practice.newsheadlines.model
 
 import android.os.Parcelable
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 import java.util.*
@@ -11,6 +12,8 @@ import java.util.*
 
 @Parcelize
 data class NewsArticle(
+    @field:Expose(serialize = false, deserialize = false)
+    val id: String = UUID.randomUUID().toString(),
     @field:SerializedName("source")
     val source: NewsSource? = null,
     @field:SerializedName("author")
